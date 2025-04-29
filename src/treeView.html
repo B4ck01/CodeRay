@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="{{csp}}">
+  <title>Graph View</title>
+  <script nonce="{{nonce}}" src="{{d3Uri}}"></script>
+  <script nonce="{{nonce}}">
+      window.projectStructure = {{projectStructure}};
+  </script>
+  <script nonce="{{nonce}}" src="{{treeScriptUri}}"></script>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; }
+    svg { width: 100%; height: 100vh; }
+  </style>
+</head>
+<body>
+  <svg></svg>
+  <script>
+  </script>
+</body>
+</html>

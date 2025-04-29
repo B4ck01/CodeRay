@@ -1,0 +1,56 @@
+{
+  "name": "coderay",
+  "displayName": "CodeRay",
+  "description": "Visualize your project's structure as an interactive tree.",
+  "version": "1.0.0",
+  "publisher": "B4ck01",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "activationEvents": [
+    "onCommand:coderay.selectProject",
+    "onCommand:coderay.openGraphWebview",
+    "onView:coderayActionsView"
+  ],
+  "main": "./main.js",
+  "icon": "icons/coderay.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/B4ck01/CodeRay"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "coderay.selectProject",
+        "title": "Coderay: Select Project"
+      },
+      {
+        "command": "coderay.openGraphWebview",
+        "title": "Open CodeRay Graph"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "coderay-sidebar-container",
+          "title": "CodeRay",
+          "icon": "icons/sidebar-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "coderay-sidebar-container": [
+        {
+          "id": "coderayActionsView",
+          "name": "CodeRay",
+          "type": "tree",
+          "contextualTitle": "CodeRay"
+        }
+      ]
+    }
+  },
+  "scripts": {},
+  "devDependencies": {
+    "@vscode/vsce": "^3.3.2"
+  }
+}
